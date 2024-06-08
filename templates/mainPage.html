@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/mainPage.css') }}">
+    <script src="{{ url_for('static', filename='script/brython.js') }}"></script>
+    <script src="{{ url_for('static', filename='script/brython_stdlib.js') }}"></script>
+    <title>my bank</title>
+</head>
+<body onload="brython()">
+    <script type="text/python" src="{{ url_for('static', filename='script/mainPage.py') }}"></script>
+    <div class="logoutContiner">
+        <a href="/logout">
+            <button class="logout">
+                logout
+            </button>
+        </a>
+    </div>
+    <header>
+        <h1 id="name">my bank</h1>
+        <h2>welcome to My bank</h2>
+    </header>
+    <div class="buttons">
+        <a href="/accountDetail">
+            <button class="button">
+                <p>All accounts with details</p>
+            </button>
+        </a>
+        <a href="/transfer">
+            <button class="button">
+                <p>transfer</p>
+            </button>
+        </a>
+        <a href="/recentTurnover">
+            <button class="button">
+                <p>Recent account turnovers</p>
+            </button>
+        </a>
+        <a href="/accountTurnoverBetween">
+            <button class="button">
+                <p>Account turnover between two dates</p>
+            </button>
+        </a> 
+        <a href="/accountBlocking">
+            <button class="button">
+                <p>account blocking</p>
+            </button>
+        </a>
+        <a href="/loans">
+            <button class="button">
+                <p>loans</p>
+            </button>
+        </a>
+    </div>
+</body>
+</html>

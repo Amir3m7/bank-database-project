@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/login.css') }}">
+    <script src="{{ url_for('static', filename='script/brython.js') }}"></script>
+    <script src="{{ url_for('static', filename='script/brython_stdlib.js') }}"></script>
+    <title>my bank</title>
+</head>
+<body onload="brython()">
+    <script type="text/python" src="{{ url_for('static', filename='script/login.py') }}"></script>
+    <header>
+        <h1>Login</h1>
+    </header>
+    <div class="form">
+        <input type="text" class="form-input" placeholder="Username" id="username" required>
+        <input type="password" class="form-input" placeholder="Password" id="password" required>
+        <button class="form-button" id="send">Login</button>
+    </div>
+    <p id="message">
+    </p>
+</body>
+</html>

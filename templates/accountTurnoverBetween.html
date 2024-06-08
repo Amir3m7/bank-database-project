@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/accountTurnoverBetween.css') }}">
+    <script src="{{ url_for('static', filename='script/brython.js') }}"></script>
+    <script src="{{ url_for('static', filename='script/brython_stdlib.js') }}"></script>
+    <title>my bank</title>
+</head>
+<body onload="brython()">
+    <script type="text/python" src="{{ url_for('static', filename='script/accountTurnoverBetween.py') }}"></script>
+    <header>
+        <h1>recent turnover between to date</h1>
+    </header>
+    <div class="form">
+        <input type="text" class="form-input" id="source" placeholder="account" required>
+        <div class="date">
+            <div class="divDate">
+                <div class="lableDiv"><label for="from">from</label></div>
+                <input type="date" class="form-input" id="from" name="from" value="2024-01-01"required>
+            </div>
+            <div class="divDate">
+                <div class="lableDiv"><label for="to">to</label></div>
+                <input type="date" class="form-input" id="to" name="to" value="2024-01-01"required>
+            </div>
+        </div>
+        <button class="form-button" type="submit" id="send">OK</button>
+    </div>
+    <p id="message">
+    </p>
+    <div class="table" id="table">
+        <table id="customers">
+        </table>
+    </div>
+</body>
+</html>

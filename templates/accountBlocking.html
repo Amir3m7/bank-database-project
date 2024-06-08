@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/accountBlocking.css') }}">
+    <script src="{{ url_for('static', filename='script/brython.js') }}"></script>
+    <script src="{{ url_for('static', filename='script/brython_stdlib.js') }}"></script>
+    <title>my bank</title>
+</head>
+<body onload="brython()">
+    <script type="text/python" src="{{ url_for('static', filename='script/accountBlocking.py') }}"></script>
+    <header>
+      <h1>account blocking/unblocking</h1>
+    </header>
+    <div class="form">
+        <input type="text" class="form-input" id="source" placeholder="account" required>
+        <button class="form-button" type="submit" id="send">OK</button>
+    </div>
+    <p id="message">
+    </p>
+</body>
+</html>

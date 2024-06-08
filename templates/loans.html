@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/loans.css') }}">
+    <script src="{{ url_for('static', filename='script/brython.js') }}"></script>
+    <script src="{{ url_for('static', filename='script/brython_stdlib.js') }}"></script>
+    <title>my bank</title>
+</head>
+<body onload="brython()">
+    <script type="text/python" src="{{ url_for('static', filename='script/loans.py') }}"></script>
+    <header>
+      <h1>loans</h1>
+    </header>
+    <div class="form">
+      <input type="text" class="form-input" id="source" placeholder="account" required>
+      <button class="form-button" type="submit" id="point">loan point</button>
+      <button class="form-button" type="submit" id="get">get loan</button>
+    </div>
+    <p class="message" id="message">
+    </p>
+    <div class="table" id="table">
+      <table id="customers">
+      </table>
+    </div>
+</body>
+</html>

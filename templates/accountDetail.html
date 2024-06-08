@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/accountDetail.css') }}">
+    <script src="{{ url_for('static', filename='script/brython.js') }}"></script>
+    <script src="{{ url_for('static', filename='script/brython_stdlib.js') }}"></script>
+    <title>my bank</title>
+</head>
+<body onload="brython()">
+    <script type="text/python" src="{{ url_for('static', filename='script/accountDetail.py') }}"></script>
+    <header>
+      <h1>account details</h1>
+    </header>
+    <div class="table" id="table">
+      <table id="customers">
+        <tr>
+          <th>user id</th>
+          <th>account number</th>
+          <th>blocked</th>
+          <th>ammount</th>
+          <th>date created</th>
+        </tr>
+      </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/transactionSecc.css') }}">
+    <script src="{{ url_for('static', filename='script/brython.js') }}"></script>
+    <script src="{{ url_for('static', filename='script/brython_stdlib.js') }}"></script>
+    <title>my bank</title>
+</head>
+<body onload="brython()">
+    <script type="text/python" src="{{ url_for('static', filename='script/transactionSecc.py') }}"></script>
+    <header>
+      <h1>The transfer was successful   </h1>
+    </header>
+    <div class="table" id="table">
+      <table id="customers">
+        <tr>
+          <th>src</th>
+          <th>dis</th>
+          <th>ammount</th>
+        </tr>
+      </table>
+    </div>
+    <div class="aClass"><a href="/mainPage">return to main page</a></div>
+</body>
+</html>

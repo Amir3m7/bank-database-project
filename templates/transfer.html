@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/transfer.css') }}">
+    <script src="{{ url_for('static', filename='script/brython.js') }}"></script>
+    <script src="{{ url_for('static', filename='script/brython_stdlib.js') }}"></script>
+    <title>my bank</title>
+</head>
+<body onload="brython()">
+    <script type="text/python" src="{{ url_for('static', filename='script/transfer.py') }}"></script>
+    <header>
+        <h1>transfer</h1>
+    </header>
+    <div class="form">
+        <div class="lableDiv"><label for="source">source</label></div>
+        <input type="text" class="form-input" id="source" required>
+        <p id="source_message">
+        </p>
+        <div class="lableDiv"><label for="destination">destination</label></div>
+        <input type="text" class="form-input" id="destination" required>
+        <p id="Knowing">
+        </p>
+        <div class="lableDiv"><label for="amount">amount</label></div>
+        <input type="text" class="form-input" id="amount" required>
+        <button class="form-button" id="send">OK</button>
+    </div>
+    <p id="message">
+    </p>
+</body>
+</html>
